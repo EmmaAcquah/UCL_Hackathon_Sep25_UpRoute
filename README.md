@@ -15,10 +15,14 @@
 * Dayo Titiloye
 
 ## Technologies Used
+* React - coding language
+* Figma - diagrams
+* Loop - planning
 
 ## Change log
 
 ## Wins
+* Good collaboration
 
 ## Challenges
 
