@@ -1,0 +1,16 @@
+.FrequentlyVisitedPlaces {
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  li button {
+    background-color: #e0e0e0;
+
+    &:hover {
+      background-color: lightGrey;
+      outline: black solid 0.2ch;
+    }
+  }
+}

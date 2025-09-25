@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { useRealtimeAgent } from './hooks/';
 import {
   // getLocation
@@ -7,6 +7,7 @@ import {
 import FloorPlan from './components/FloorPlan';
 import Header from './components/Header';
 import Button from './components/Button';
+import FrequentlyVisitedPlaces from './components/FrequentlyVisitedPlaces';
 import { HighlightedState } from '../types';
 import './App.css';
 
@@ -25,7 +26,7 @@ function App() {
     ];
   }, [setHighlighted]);
 
-  useRealtimeAgent(tools);
+  // useRealtimeAgent(tools);
 
   // const getLectureData = async () => {
   //   try {
@@ -74,20 +75,28 @@ function App() {
     }));
   };
 
+  const selectFrequentlyVisitedPlace = (place: string) => {
+    console.log(`Selected frequently visited place: ${place}`);
+    if (place === 'Staff Office') {
+      handleLocationAClick();
+    } else if (place === 'Lecture Hall') {
+      handleLocationBClick();
+    } else if (place === 'Chemistry Books') {
+      handleLocationCClick();
+    }
+    // Implement navigation or other actions based on the selected place
+  };
+
   return (
     <>
       <Header />
       <main>
-        <div className="button-container">
-          <Button onClick={handleLocationAClick}>To Staff Office</Button>
-          <Button onClick={handleLocationBClick}>To Lecture Hall</Button>
-          <Button onClick={handleLocationCClick}>To Chemistry Books</Button>
-        </div>
+        <FrequentlyVisitedPlaces selectFrequentlyVisitedPlace={selectFrequentlyVisitedPlace} />
         <div className="floorplan-container">
           <FloorPlan highlighted={highlighted} />
         </div>
       </main>
-    </>
+    </> 
   );
 }
 
