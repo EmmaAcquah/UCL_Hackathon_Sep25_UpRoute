@@ -1,3 +1,5 @@
+import type { Dispatch, SetStateAction } from 'react';
+
 /**
  * Represents the response from the OpenAI Realtime Ephemeral API key endpoint.
  *
@@ -77,4 +79,4 @@ export interface HighlightedState {
 /** 
  * Define a type for the setHighlighted function 
  */
-export type SetHighlighted = React.Dispatch<React.SetStateAction<HighlightedState>>;
+export type SetHighlighted = Dispatch<SetStateAction<HighlightedState>>;

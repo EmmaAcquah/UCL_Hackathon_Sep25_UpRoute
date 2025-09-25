@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { RealtimeAgent, RealtimeSession } from '@openai/agents/realtime';
 import { logSessionHistory } from '../utils';
-import { ASSISTANT_INSTRUCTIONS, ASSISTANT_NAME, ASSISTANT_VOICE } from '../agent/config';
+// import { ASSISTANT_INSTRUCTIONS, ASSISTANT_NAME, ASSISTANT_VOICE } from '../agent/config';
 import type { WorkerAPIResponseData } from '../../types';
 
 const ASSISTANT_NAME = 'Assistant';

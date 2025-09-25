@@ -26,7 +26,7 @@ function App() {
     ];
   }, [setHighlighted]);
 
-  // useRealtimeAgent(tools);
+  useRealtimeAgent(tools);
 
   // const getLectureData = async () => {
   //   try {
