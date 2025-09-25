@@ -1,5 +1,5 @@
 {
-	"name": "uproute",
+	"name": "ucl-hackathon-uproute",
 	"description": "Find your way around UCL!",
 	"private": true,
 	"scripts": {
