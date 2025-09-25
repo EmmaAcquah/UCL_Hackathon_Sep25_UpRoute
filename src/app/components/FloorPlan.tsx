@@ -21,7 +21,7 @@ const defaultProps = {
 
 const FloorPlan = ({
   highlighted = defaultProps.highlighted
-}) => {
+}: FloorPlanProps) => {
 
   const transparent = "transparent";
 
