@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useRealtimeAgent } from './hooks/';
 import { getWeather, createDisplayTextTool } from './tools';
 import FloorPlan from './components/FloorPlan';
@@ -15,6 +15,22 @@ function App() {
 
   useRealtimeAgent(tools);
 
+  const getLectureData = async () => {
+    try {
+      const response = await fetch('/api/lectures');
+      if (!response.ok) {
+        throw new Error(`Error fetching lecture data: ${response.statusText}`);
+      }
+      const data = await response.json();
+      console.log('Lecture Data:', data);
+    } catch (error) {
+      console.error(error);
+    };
+  };
+
+  useEffect(() => {
+    getLectureData();
+  }, []);
 
   return (
     <>
