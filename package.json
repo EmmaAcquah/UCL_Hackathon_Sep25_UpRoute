@@ -1,6 +1,6 @@
 {
-	"name": "openai-realtime-agent-deployment-spike-01",
-	"description": "Spike for voice agent deployment using OpenAI's Realtime Agents and Cloudflare Workers, with React frontend.",
+	"name": "uproute",
+	"description": "Find your way around UCL!",
 	"private": true,
 	"scripts": {
 		"build": "tsc -b && vite build",
