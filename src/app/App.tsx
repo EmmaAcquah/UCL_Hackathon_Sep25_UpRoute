@@ -8,6 +8,14 @@ import './App.css';
 
 function App() {
   const [displayText, setDisplayText] = useState<string>('');
+  // es-lint-disable-next-line @typescript-eslint/no-unused-vars
+  const [highlighted, _setHighlighted] = useState({
+    directionArrows: {
+      '01': false,
+      '02': false,
+      '03': false,
+    }
+  });
 
   const tools = useMemo(() => {
     return [getWeather, createDisplayTextTool(setDisplayText)];
@@ -36,7 +44,7 @@ function App() {
     <>
       <main>
         <div className='header'>
-          <Header/>
+          <Header />
         </div>
         <div className="button-container">
           <Button onClick={() => alert("Button Clicked!")}>Location A</Button>
@@ -44,11 +52,11 @@ function App() {
           <Button onClick={() => alert("Button Clicked!")}>Location C</Button>
         </div>
         <div className="floorplan-container">
-          <FloorPlan />
+          <FloorPlan highlighted={highlighted} />
         </div>
-        {/* <h1>OpenAI Realtime Agent Deployment Spike 01</h1>
+        {/* <h1>OpenAI Realtime Agent Deployment Spike 01</h1> */}
         <div>Output:</div>
-        <div>{displayText}</div> */}
+        <div>{displayText}</div>
       </main>
     </>
   );
