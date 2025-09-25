@@ -3,9 +3,19 @@ import { OpenAIEphemeralApiKeyResponseData } from '../types';
 
 const app = new Hono<{ Bindings: Env }>();
 
+const mockData = {
+  todaysLesson: "Computer Science",
+  nextLesson: "Mathematics",
+  weather: "Sunny, 24°C",
+  cafeteriaMenu: ["Pasta", "Salad", "Fruit"],
+};
 
 app.get("/api/heartbeat", (context) => {
   return context.json({ message: 'API available' });
+});
+
+app.get('/api/lectures', (context) => {
+  return context.json(mockData);
 });
 
 /**
