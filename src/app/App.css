@@ -45,7 +45,8 @@
 } */
 
 main {
-  display: flex;           /* Makes left and right sections sit side by side */
+  /* display: flex;  
+  flex-direction: column;         Makes left and right sections sit side by side */
   height: 100vh;           /* Full viewport height */
   padding: 20px;           /* Optional padding */
   gap: 20px;               /* Space between buttons and floorplan */
@@ -61,7 +62,7 @@ main {
 }
 
 .button-container button {
-  padding: 75px;           /* Makes buttons bigger */
+  padding: 2rem;           /* Makes buttons bigger */
   font-size: 16px;         /* Bigger text for readability */
   width: 100%;             /* Buttons fill the container width */
 }
@@ -74,9 +75,9 @@ main {
 }
 
 .header {
-  position: fixed;   /* Stick to viewport */
-  top: 0;            /* Top of the page */
-  left: 0;           /* Align to left */
+  /* position: fixed;   Stick to viewport */
+  /* top: 0;            /* Top of the page */
+  /* left: 0;           Align to left */ 
   width: 100%;       /* Full width */
   background-color: #333;
   color: white;
