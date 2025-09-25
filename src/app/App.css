@@ -1,11 +1,11 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  /* padding: 2rem; */
+  /* text-align: center; */
 }
 
-.logo {
+/* .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
@@ -42,4 +42,42 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+main {
+  display: flex;           /* Makes left and right sections sit side by side */
+  height: 100vh;           /* Full viewport height */
+  padding: 20px;           /* Optional padding */
+  gap: 20px;               /* Space between buttons and floorplan */
+  box-sizing: border-box;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;  /* Stack buttons vertically */
+  gap: 10px;               /* Space between buttons */
+  flex: 1;                 /* Take more space if needed */
+  margin-right:200px;
+}
+
+.button-container button {
+  padding: 75px;           /* Makes buttons bigger */
+  font-size: 16px;         /* Bigger text for readability */
+  width: 100%;             /* Buttons fill the container width */
+}
+
+.floorplan-container {
+  flex: 3;                 /* FloorPlan takes more space than buttons */
+  display: flex;
+  justify-content: center; /* Center floorplan if needed */
+  align-items: center;
+}
+
+.header {
+  position: fixed;   /* Stick to viewport */
+  top: 0;            /* Top of the page */
+  left: 0;           /* Align to left */
+  width: 100%;       /* Full width */
+  background-color: #333;
+  color: white;
 }
