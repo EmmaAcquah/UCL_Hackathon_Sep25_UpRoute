@@ -1,4 +1,4 @@
-# UCL_Hackathon_UpRoute
+# UCL Hackathon Up Route
 
 ## Installation & Usage
 ### Installation
