@@ -1,13 +1,34 @@
-// import { useState } from "react";
 
-const FloorPlan = () => {
+interface FloorPlanProps {
+  highlighted: {
+    directionArrows: {
+      '01': boolean;
+      '02': boolean;
+      '03': boolean;
+    }
+  }
+}
 
-  const selectedBackgroundColor = "gold";
+const defaultProps = {
+  highlighted: {
+    directionArrows: {
+      '01': false,
+      '02': false,
+      '03': false,
+    }
+  }
+};
+
+const FloorPlan = ({
+  highlighted = defaultProps.highlighted
+}) => {
+
+  const transparent = "transparent";
 
   const directionArrows = {
-    '01': { colour: 'orange' },
-    '02': { colour: 'orange' },
-    '03': { colour: 'orange' },
+    '01': { colour: highlighted.directionArrows['01'] ? 'orange' : transparent },
+    '02': { colour: highlighted.directionArrows['02'] ? 'orange' : transparent },
+    '03': { colour: highlighted.directionArrows['03'] ? 'orange' : transparent },
   }
 
   const staffOffices = {
