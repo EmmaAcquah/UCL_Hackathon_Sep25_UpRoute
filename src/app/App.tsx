@@ -4,9 +4,9 @@ import {
   // getLocation
   showRouteToLocation
 } from './tools';
+import Main from './components/Main';
 import FloorPlan from './components/FloorPlan';
 import Header from './components/Header';
-import Button from './components/Button';
 import FrequentlyVisitedPlaces from './components/FrequentlyVisitedPlaces';
 import { HighlightedState } from '../types';
 import './App.css';
@@ -84,19 +84,18 @@ function App() {
     } else if (place === 'Chemistry Books') {
       handleLocationCClick();
     }
-    // Implement navigation or other actions based on the selected place
   };
 
   return (
     <>
       <Header />
-      <main>
+      <Main>
         <FrequentlyVisitedPlaces selectFrequentlyVisitedPlace={selectFrequentlyVisitedPlace} />
         <div className="floorplan-container">
           <FloorPlan highlighted={highlighted} />
         </div>
-      </main>
-    </> 
+      </Main>
+    </>
   );
 }
 

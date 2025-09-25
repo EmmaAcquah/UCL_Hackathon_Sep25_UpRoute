@@ -1,0 +1,13 @@
+.Header {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0 1rem;
+  
+  h1 {
+    margin: 0;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+}
