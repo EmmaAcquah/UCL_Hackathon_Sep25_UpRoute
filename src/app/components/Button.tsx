@@ -1,4 +1,4 @@
-import React from "react";
+import './Button.css';
 
 type ButtonProps = {
   children: React.ReactNode;
@@ -6,10 +6,11 @@ type ButtonProps = {
 };
 
 const Button: React.FC<ButtonProps> = ({ children, onClick }) => {
+
   return (
     <button
       onClick={onClick}
-      className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+      className="Button"
     >
       {children}
     </button>
