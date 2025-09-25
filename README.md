@@ -1,5 +1,8 @@
 # UCL Hackathon Up Route
 
+## Deployment link
+* https://ucl-hackathon-uproute.alex-hortfrancis.workers.dev/
+
 ## Installation & Usage
 ### Installation
 * Clone repo using `git clone https://github.com/EmmaAcquah/UCL_Hackathon_Sep25_UpRoute.git`
