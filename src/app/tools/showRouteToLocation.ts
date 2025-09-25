@@ -1,13 +1,6 @@
 import { tool } from '@openai/agents/realtime';
 import { z } from 'zod';
-
-interface HighlightedState {
-  directionArrows: {
-    [key: string]: boolean;
-  };
-}
-
-type SetHighlighted = React.Dispatch<React.SetStateAction<HighlightedState>>;
+import { SetHighlighted } from '../../types';
 
 const showRouteToLocation = (
   setHighlighted: SetHighlighted
@@ -18,7 +11,6 @@ const showRouteToLocation = (
     parameters: z.object({ location: z.enum(['staff office', 'lecture hall', 'chemistry books']) }),
     execute: async ({ location }) => {
       console.log(`Showing route to: ${location}`);
-
       if (location === 'staff office') {
         setHighlighted(prev => ({
           ...prev,

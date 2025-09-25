@@ -62,3 +62,19 @@ export interface WorkerAPIResponseData {
   /** An error message if an error occurred. */
   error?: string;
 }
+
+/** 
+ * Define a type for the highlighted state 
+ */
+export interface HighlightedState {
+  directionArrows: {
+    '01': boolean;
+    '02': boolean;
+    '03': boolean;
+  };
+}
+
+/** 
+ * Define a type for the setHighlighted function 
+ */
+export type SetHighlighted = React.Dispatch<React.SetStateAction<HighlightedState>>;

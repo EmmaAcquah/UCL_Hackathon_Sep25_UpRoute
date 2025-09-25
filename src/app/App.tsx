@@ -1,21 +1,17 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useRealtimeAgent } from './hooks/';
 import {
-  // getWeather, 
-  // createDisplayTextTool 
   // getLocation
   showRouteToLocation
 } from './tools';
 import FloorPlan from './components/FloorPlan';
 import Header from './components/Header';
 import Button from './components/Button';
+import { HighlightedState } from '../types';
 import './App.css';
-import { set } from 'zod/v4';
 
 function App() {
-  const [displayText, setDisplayText] = useState<string>('');
-  // es-lint-disable-next-line @typescript-eslint/no-unused-vars
-  const [highlighted, setHighlighted] = useState({
+  const [highlighted, setHighlighted] = useState<HighlightedState>({
     directionArrows: {
       '01': false,
       '02': false,
@@ -25,11 +21,9 @@ function App() {
 
   const tools = useMemo(() => {
     return [
-      // getWeather, 
-      // createDisplayTextTool(setDisplayText)
       showRouteToLocation(setHighlighted)
     ];
-  }, [setDisplayText]);
+  }, [setHighlighted]);
 
   useRealtimeAgent(tools);
 
@@ -92,9 +86,6 @@ function App() {
         <div className="floorplan-container">
           <FloorPlan highlighted={highlighted} />
         </div>
-        {/* <h1>OpenAI Realtime Agent Deployment Spike 01</h1> */}
-        {/* <div>Output:</div>
-        <div>{displayText}</div> */}
       </main>
     </>
   );
